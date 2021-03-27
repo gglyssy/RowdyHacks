@@ -8,7 +8,7 @@
 
 <BorderPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainGameOptionsController">
    <center>
-      <GridPane BorderPane.alignment="CENTER">
+      <GridPane style="-fx-background-color: #1c2c54;" BorderPane.alignment="CENTER">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -25,12 +25,12 @@
          <children>
             <ChoiceBox fx:id="Categories" prefWidth="150.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
             <ChoiceBox fx:id="NOQ" prefWidth="150.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-            <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="99.0" prefWidth="186.0" text="Category" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="99.0" prefWidth="186.0" text="Category" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" text="Number of Questions" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Label alignment="CENTER" text="Number of Questions" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <font>
                   <Font size="18.0" />
                </font>
@@ -72,7 +72,7 @@
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="114.0" prefWidth="700.0" text="Trivia Mayhem" textAlignment="CENTER">
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="114.0" prefWidth="700.0" style="-fx-background-color: #4bc3B5;" text="Trivia Mayhem" textAlignment="CENTER">
                      <font>
                         <Font size="36.0" />
                      </font>
