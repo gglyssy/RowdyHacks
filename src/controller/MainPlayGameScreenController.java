@@ -65,7 +65,6 @@ public class MainPlayGameScreenController {
     	ArrayList<Categories> categoryAL = ql.getCategoryList();
     	HashMap<Categories, ArrayList<Questions>> questionMap = ql.createMap(categoryAL, questionAL);
     	String cat = Main.getCat();
-    	System.out.println(cat);
     	int catNum = 1;
     	if(cat.equals("History")) {
     		catNum = 0;
