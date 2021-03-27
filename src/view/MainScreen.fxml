@@ -49,17 +49,17 @@
    <top>
       <Pane prefHeight="200.0" prefWidth="600.0" style="-fx-background-color: #4bc3B5; -fx-background-radius: 55;" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="294.0" layoutY="14.0" text="Trivia Mayhem" textFill="#010402">
+            <Label layoutX="215.0" layoutY="23.0" text="Trivia Mayhem" textFill="#010402">
                <font>
-                  <Font name="Arial Black" size="48.0" />
+                  <Font name="Arial Black" size="56.0" />
                </font>
             </Label>
-            <Label layoutX="376.0" layoutY="85.0" text="A game to test your knowledge" textFill="#010402">
+            <Label layoutX="295.0" layoutY="139.0" text="A game to test your knowledge" textFill="#010402">
                <font>
-                  <Font size="18.0" />
+                  <Font size="26.0" />
                </font>
             </Label>
-            <ImageView fitHeight="194.0" fitWidth="292.0" layoutX="76.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="194.0" fitWidth="292.0" layoutX="10.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../data/Trivia_Mayhem_Logo.png" />
                </image>
