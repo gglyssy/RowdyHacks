@@ -2,18 +2,20 @@ package application;
 
 import javafx.stage.Stage;
 
-import java.util.Random;
-import java.util.stream.IntStream;
-
+import java.io.File;
+import controller.SettingsController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Slider;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 
 public class Main extends Application {
 	
+	static MediaPlayer mediaPlayer;
 	static Stage primaryStage;
-	
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		BorderPane root = (BorderPane) FXMLLoader.load(Main.class.getResource("/view/MainScreen.fxml")); 		//Import from SceneBuilder fxml file
@@ -23,6 +25,19 @@ public class Main extends Application {
 		primaryStage.setScene(scene);
 		primaryStage.setTitle("Trivia Mayhem");
 		primaryStage.show();
+		
+		String musicFile = "ChillVibes.mp3"; 
+		// Play music
+		Media sound = new Media(new File(musicFile).toURI().toString());
+		mediaPlayer = new MediaPlayer(sound);
+		Double Volume = SettingsController.oldVolume;
+		mediaPlayer.setVolume(Volume);
+		mediaPlayer.setCycleCount(MediaPlayer.INDEFINITE);
+		mediaPlayer.play();
+	}
+	
+	public static void updateVol(double NewVolume) {
+		mediaPlayer.setVolume(NewVolume);
 	}
 	
 	public static Stage getStage() {

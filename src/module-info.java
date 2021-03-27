@@ -7,4 +7,5 @@ module RowdyHacks {
 	requires javafx.controls;
 	requires java.desktop;
 	requires javafx.base;
+	requires javafx.media;
 }

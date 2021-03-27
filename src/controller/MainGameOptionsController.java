@@ -63,8 +63,13 @@ public class MainGameOptionsController {
     }
 
     @FXML
-    public void SettingsOpened(ActionEvent event) {
-
+    public void SettingsOpened(ActionEvent event) throws IOException {
+    	FXMLLoader HTP = new FXMLLoader(getClass().getResource("/view/Settings.fxml"));
+		Parent root = HTP.load();
+		Stage stage = new Stage();
+		stage.setScene(new Scene(root));
+		stage.setTitle("Settings of Trivia Mayhem");
+		stage.show();
     }
 
     @FXML
