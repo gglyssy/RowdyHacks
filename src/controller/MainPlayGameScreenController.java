@@ -59,8 +59,15 @@ public class MainPlayGameScreenController {
     	Categories category = categoryAL.get(1);
     	ArrayList<Questions> QAL = questionMap.get(category);
     	String title = QAL.get(1).getQuestion();
+    	String choice1 = QAL.get(1).getChoice1();
+    	String choice2 = QAL.get(1).getChoice2();
+    	String choice3 = QAL.get(1).getChoice3();
+    	String choice4 = QAL.get(1).getChoice4();
     	QuestionTitle.setText(title);
-    	
+    	Answer1.setText(choice1);
+    	Answer2.setText(choice2);
+    	Answer3.setText(choice3);
+    	Answer4.setText(choice4);
     	
     	
     }
