@@ -72,6 +72,10 @@ public class MainPlayGameScreenController {
     	
     }
     
+    @FXML
+    public void checkSolution(ActionEvent event) {
+    	System.out.println("Answer Pushed");
+    }
 
     @FXML
     public void GoHomePressed(ActionEvent event) throws IOException {
