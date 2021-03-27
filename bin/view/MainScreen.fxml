@@ -9,7 +9,7 @@
 
 <BorderPane prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #1c2c54;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainScreenController">
    <bottom>
-      <GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="271.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+      <GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="231.0" prefWidth="700.0" style="-fx-background-color: #010402; -fx-background-radius: 0;" BorderPane.alignment="CENTER">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="415.0" minWidth="10.0" prefWidth="138.0" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="462.0" minWidth="10.0" prefWidth="462.0" />
@@ -48,7 +48,7 @@
       </GridPane>
    </bottom>
    <top>
-      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #4bc3B5; -fx-background-radius: 100;" BorderPane.alignment="CENTER">
+      <Pane prefHeight="200.0" prefWidth="600.0" style="-fx-background-color: #4bc3B5; -fx-background-radius: 55;" BorderPane.alignment="CENTER">
          <children>
             <Label layoutX="155.0" layoutY="26.0" text="Trivia Mayhem" textFill="#010402">
                <font>
