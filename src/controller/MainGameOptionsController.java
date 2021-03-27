@@ -32,9 +32,18 @@ public class MainGameOptionsController {
 
     @FXML
     public MenuItem HTP;
-    
+
     @FXML
-    public MenuItem GoHome;
+    public MenuItem Home;
+
+    @FXML
+    public MenuItem Settings;
+
+    @FXML
+    public MenuItem About;
+    
+    
+    
     
     public void initialize(){
         NOQ.setValue(5);
@@ -45,7 +54,7 @@ public class MainGameOptionsController {
     }
     
     @FXML
-    public void GoHomePressed(ActionEvent event) throws IOException {
+    public void goHome(ActionEvent event) throws IOException {
     	FXMLLoader main = new FXMLLoader(getClass().getResource("/view/MainScreen.fxml"));
 		Parent root = main.load();
 		Stage stage = Main.getStage();
@@ -54,12 +63,27 @@ public class MainGameOptionsController {
     }
 
     @FXML
-    public void HTPPressed(ActionEvent event) throws IOException {
+    public void SettingsOpened(ActionEvent event) {
+
+    }
+
+    @FXML
+    public void HTPPushed(ActionEvent event) throws IOException {
     	FXMLLoader HTP = new FXMLLoader(getClass().getResource("/view/HowToPlayInGame.fxml"));
 		Parent root = HTP.load();
 		Stage stage = new Stage();
 		stage.setScene(new Scene(root));
-		stage.setTitle("How To Play");
+		stage.setTitle("How To Play Trivia Mayhem");
+		stage.show();
+    }
+
+    @FXML
+    public void openAbout(ActionEvent event) throws IOException {
+    	FXMLLoader about = new FXMLLoader(getClass().getResource("/view/AboutScreen.fxml"));
+		Parent root = about.load();
+		Stage stage = new Stage();
+		stage.setScene(new Scene(root));
+		stage.setTitle("About Trivia Mayhem");
 		stage.show();
     }
     

@@ -5,14 +5,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: yellow;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AboutScreenController">
+<BorderPane prefHeight="400.0" prefWidth="500.0" style="-fx-background-color: yellow;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AboutScreenController">
    <top>
       <Label text="Creators: ...." BorderPane.alignment="CENTER" />
    </top>
    <center>
       <Label text="This desktop app was put together.." BorderPane.alignment="CENTER" />
    </center>
-   <bottom>
-      <Button fx:id="GoBackButton" mnemonicParsing="false" onAction="#goBackToMain" text="Go back" BorderPane.alignment="CENTER" />
-   </bottom>
 </BorderPane>

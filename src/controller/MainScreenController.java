@@ -55,7 +55,7 @@ public class MainScreenController {
 		Parent root = HTP.load();
 		Stage stage = new Stage();
 		stage.setScene(new Scene(root));
-		stage.setTitle("How To Play");
+		stage.setTitle("How To Play Trivia Mayhem");
 		stage.show();
     }
 
@@ -63,8 +63,9 @@ public class MainScreenController {
     public void openAbout(ActionEvent event) throws IOException {
     	FXMLLoader about = new FXMLLoader(getClass().getResource("/view/AboutScreen.fxml"));
 		Parent root = about.load();
-		Stage stage = Main.getStage();
+		Stage stage = new Stage();
 		stage.setScene(new Scene(root));
+		stage.setTitle("About Trivia Mayhem");
 		stage.show();
     }
     

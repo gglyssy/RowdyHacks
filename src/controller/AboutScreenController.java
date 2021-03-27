@@ -13,16 +13,4 @@ import javafx.stage.Stage;
 
 public class AboutScreenController {
 
-    @FXML
-    public Button GoBackButton;
-
-    @FXML
-    public void goBackToMain(ActionEvent event) throws IOException {
-    	FXMLLoader main = new FXMLLoader(getClass().getResource("/view/MainScreen.fxml"));
-		Parent root = main.load();
-		Stage stage = Main.getStage();
-		stage.setScene(new Scene(root));
-		stage.show();
-    }
-
 }
