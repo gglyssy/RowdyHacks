@@ -12,6 +12,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.MenuItem;
 import javafx.stage.Stage;
 
 public class MainGameOptionsController {
@@ -29,12 +30,37 @@ public class MainGameOptionsController {
     @FXML
     public Button Launch;
 
+    @FXML
+    public MenuItem HTP;
+    
+    @FXML
+    public MenuItem GoHome;
+    
     public void initialize(){
         NOQ.setValue(5);
         NOQ.setItems(NOQOp);
     	Categories.setValue("Movies");
     	Categories.setItems(CategoriesOp);
     
+    }
+    
+    @FXML
+    public void GoHomePressed(ActionEvent event) throws IOException {
+    	FXMLLoader main = new FXMLLoader(getClass().getResource("/view/MainScreen.fxml"));
+		Parent root = main.load();
+		Stage stage = Main.getStage();
+		stage.setScene(new Scene(root));
+		stage.show();
+    }
+
+    @FXML
+    public void HTPPressed(ActionEvent event) throws IOException {
+    	FXMLLoader HTP = new FXMLLoader(getClass().getResource("/view/HowToPlayInGame.fxml"));
+		Parent root = HTP.load();
+		Stage stage = new Stage();
+		stage.setScene(new Scene(root));
+		stage.setTitle("How To Play");
+		stage.show();
     }
     
     @FXML
