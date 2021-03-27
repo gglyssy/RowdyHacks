@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
@@ -58,6 +59,11 @@
                   <Font size="18.0" />
                </font>
             </Label>
+            <ImageView fitHeight="194.0" fitWidth="292.0" layoutX="76.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../data/Trivia_Mayhem_Logo.png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
    </top>
