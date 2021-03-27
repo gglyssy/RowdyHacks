@@ -20,7 +20,8 @@ public class Main extends Application {
 		Scene scene = new Scene(root); 															//Create new scene
 		//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm()); //Add style to scene
 		Main.primaryStage = primaryStage;
-		primaryStage.setScene(scene);															//Set scene													//Set Title
+		primaryStage.setScene(scene);
+		primaryStage.setTitle("Trivia Mayhem");
 		primaryStage.show();
 	}
 	

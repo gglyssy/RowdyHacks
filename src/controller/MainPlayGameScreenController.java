@@ -47,6 +47,7 @@ public class MainPlayGameScreenController {
 		Parent root = HTP.load();
 		Stage stage = new Stage();
 		stage.setScene(new Scene(root));
+		stage.setTitle("How To Play");
 		stage.show();
     }
 
