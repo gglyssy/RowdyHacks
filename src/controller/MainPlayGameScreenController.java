@@ -28,9 +28,6 @@ public class MainPlayGameScreenController {
     public Button Answer4;
 
     @FXML
-    public MenuItem GoHome;
-
-    @FXML
     public Button Answer2;
 
     @FXML
@@ -41,6 +38,15 @@ public class MainPlayGameScreenController {
 
     @FXML
     public MenuItem HTP;
+
+    @FXML
+    public MenuItem Home;
+
+    @FXML
+    public MenuItem Settings;
+
+    @FXML
+    public MenuItem About;
     
     @FXML
     public Label QuestionTitle;
@@ -193,6 +199,10 @@ public class MainPlayGameScreenController {
 		stage.show();
     }
     
+    @FXML
+    public void SettingsOpened(ActionEvent event) {
+
+    }
 
     @FXML
     public void HTPPressed(ActionEvent event) throws IOException {
@@ -201,6 +211,16 @@ public class MainPlayGameScreenController {
 		Stage stage = new Stage();
 		stage.setScene(new Scene(root));
 		stage.setTitle("How To Play");
+		stage.show();
+    }
+    
+    @FXML
+    public void openAbout(ActionEvent event) throws IOException {
+    	FXMLLoader about = new FXMLLoader(getClass().getResource("/view/AboutScreen.fxml"));
+		Parent root = about.load();
+		Stage stage = new Stage();
+		stage.setScene(new Scene(root));
+		stage.setTitle("About Trivia Mayhem");
 		stage.show();
     }
 

@@ -16,14 +16,24 @@
                     <menus>
                       <Menu mnemonicParsing="false" text="Home">
                         <items>
-                          <MenuItem fx:id="GoHome" mnemonicParsing="false" onAction="#GoHomePressed" text="Go To Main Screen" />
+                          <MenuItem fx:id="Home" mnemonicParsing="false" onAction="#GoHomePressed" text="Go To Main Screen" />
                         </items>
                       </Menu>
+                        <Menu mnemonicParsing="false" text="Settings">
+                           <items>
+                              <MenuItem fx:id="Settings" mnemonicParsing="false" onAction="#SettingsOpened" text="Open Settings" />
+                           </items>
+                        </Menu>
                       <Menu mnemonicParsing="false" text="Help">
                         <items>
                           <MenuItem fx:id="HTP" mnemonicParsing="false" onAction="#HTPPressed" text="How To Play" />
                         </items>
                       </Menu>
+                        <Menu mnemonicParsing="false" text="About">
+                           <items>
+                              <MenuItem fx:id="About" mnemonicParsing="false" onAction="#openAbout" text="About" />
+                           </items>
+                        </Menu>
                     </menus>
                   </MenuBar>
                </children>
