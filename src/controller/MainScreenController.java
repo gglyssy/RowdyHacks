@@ -32,13 +32,21 @@ public class MainScreenController {
     }
     
     @FXML
-    public void StartAGamePressed(ActionEvent event) {
-    	System.out.println("Start pressed");
+    public void StartAGamePressed(ActionEvent event) throws IOException {
+    	FXMLLoader Start = new FXMLLoader(getClass().getResource("/view/MainPlayGameScreen.fxml"));
+		Parent root = Start.load();
+		Stage stage = Main.getStage();
+		stage.setScene(new Scene(root));
+		stage.show();
     }
 
     @FXML
-    public void HowToPlayPressed(ActionEvent event) {
-    	System.out.println("HTP pressed");
+    public void HowToPlayPressed(ActionEvent event) throws IOException {
+    	FXMLLoader HTP = new FXMLLoader(getClass().getResource("/view/HowToPlayScreen.fxml"));
+		Parent root = HTP.load();
+		Stage stage = Main.getStage();
+		stage.setScene(new Scene(root));
+		stage.show();
     }
 
     @FXML
