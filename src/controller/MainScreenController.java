@@ -26,10 +26,6 @@ public class MainScreenController {
 
     @FXML
     public Button About;
-
-    public void initialize(URL url, ResourceBundle rb){
-    
-    }
     
     @FXML
     public void StartAGamePressed(ActionEvent event) throws IOException {
