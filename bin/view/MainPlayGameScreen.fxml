@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainPlayGameScreenController">
+   <top>
+      <SplitPane dividerPositions="0.17006802721088435" orientation="VERTICAL" prefHeight="149.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="28.0" prefWidth="898.0">
+               <children>
+                  <MenuBar>
+                    <menus>
+                      <Menu mnemonicParsing="false" text="Home">
+                        <items>
+                          <MenuItem fx:id="GoHome" mnemonicParsing="false" onAction="#GoHomePressed" text="Go To Main Screen" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Help">
+                        <items>
+                          <MenuItem fx:id="HTP" mnemonicParsing="false" onAction="#HTPPressed" text="How To Play" />
+                        </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="102.0" prefWidth="898.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="333.0" layoutY="36.0" text="Trivia Mayhem" textAlignment="CENTER">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </top>
+   <center>
+      <SplitPane dividerPositions="0.18579234972677597" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="133.0" prefWidth="898.0">
+               <children>
+                  <Label layoutX="291.0" layoutY="15.0" text="Question HERE">
+                     <font>
+                        <Font size="48.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Button fx:id="Answer1" layoutX="48.0" layoutY="150.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="160.0" text="Answer1" />
+                  <Button fx:id="Answer2" layoutX="264.0" layoutY="150.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="160.0" text="Answer2" />
+                  <Button fx:id="Answer3" layoutX="475.0" layoutY="150.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="160.0" text="Answer3" />
+                  <Button fx:id="Answer4" layoutX="690.0" layoutY="150.0" mnemonicParsing="false" prefHeight="130.0" prefWidth="160.0" text="Answer4" />
+                  <Label alignment="CENTER" layoutX="225.0" layoutY="295.0" prefHeight="102.0" prefWidth="448.0" text="Either correct or put right answer" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </center>
+</BorderPane>

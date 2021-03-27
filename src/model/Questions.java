@@ -7,14 +7,16 @@ public class Questions {
 	String choice3;
 	String choice4;
 	String answer;
+	String category;
 	
-	public Questions(String question, String choice1, String choice2, String choice3, String choice4, String answer){
+	public Questions(String question, String choice1, String choice2, String choice3, String choice4, String answer, String category){
 		this.question = question;
 		this.choice1 = choice1;
 		this.choice2 = choice2;
 		this.choice3 = choice3;
 		this.choice4 = choice4;
 		this.answer = answer;
+		this.category = category;
 	}
 	
 	public String getQuestion() {
@@ -41,6 +43,10 @@ public class Questions {
 		return answer;
 	}
 	
+	public String getCategory() {
+		return category;
+	}
+	
 	public void setQuestion(String q) {
 		this.question = q;
 	}
@@ -63,6 +69,10 @@ public class Questions {
 	
 	public void setAnswer(String a) {
 		this.answer = a;
+	}
+	
+	public void setCategory(String c) {
+		this.category = c;
 	}
 	
 }
