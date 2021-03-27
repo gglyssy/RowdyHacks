@@ -9,40 +9,43 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.MenuItem;
 import javafx.stage.Stage;
 
 public class MainPlayGameScreenController {
 
     @FXML
-    public Button HTP;
+    public Button Answer4;
 
     @FXML
-    public Button Submit;
+    public MenuItem GoHome;
 
     @FXML
-    public Button Quit;
+    public Button Answer2;
 
     @FXML
-    public void SubmitPressed(ActionEvent event) {
-
-    }
+    public Button Answer3;
 
     @FXML
-    public void HTPPushed(ActionEvent event) throws IOException {
-    	
-       FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/HowToPlayInGame.fxml"));
- 	   Parent root = loader.load();   
- 	  
- 	   Stage stage = new Stage();
- 	   stage.setScene(new Scene(root));
- 	   stage.show();
-    }
+    public Button Answer1;
 
     @FXML
-    public void QuitPushed(ActionEvent event) throws IOException {
+    public MenuItem HTP;
+
+    @FXML
+    public void GoHomePressed(ActionEvent event) throws IOException {
     	FXMLLoader main = new FXMLLoader(getClass().getResource("/view/MainScreen.fxml"));
 		Parent root = main.load();
 		Stage stage = Main.getStage();
+		stage.setScene(new Scene(root));
+		stage.show();
+    }
+
+    @FXML
+    public void HTPPressed(ActionEvent event) throws IOException {
+    	FXMLLoader HTP = new FXMLLoader(getClass().getResource("/view/HowToPlayInGame.fxml"));
+		Parent root = HTP.load();
+		Stage stage = new Stage();
 		stage.setScene(new Scene(root));
 		stage.show();
     }
