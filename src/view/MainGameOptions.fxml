@@ -6,15 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-
-<BorderPane prefHeight="500.0" prefWidth="700.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="controller.MainGameOptionsController">
-   <top>
-      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="114.0" prefWidth="700.0" text="Trivia Mayhem" textAlignment="CENTER" BorderPane.alignment="CENTER">
-         <font>
-            <Font size="36.0" />
-         </font>
-      </Label>
-   </top>
+<BorderPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainGameOptionsController">
    <center>
       <GridPane BorderPane.alignment="CENTER">
         <columnConstraints>
@@ -47,4 +39,37 @@
          </children>
       </GridPane>
    </center>
+   <top>
+      <SplitPane dividerPositions="0.19852941176470587" orientation="VERTICAL" prefHeight="138.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <MenuBar>
+                     <menus>
+                        <Menu mnemonicParsing="false" text="Home">
+                           <items>
+                              <MenuItem fx:id="GoHome" mnemonicParsing="false" onAction="#GoHomePressed" text="Go To Main Screen" />
+                           </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Help">
+                           <items>
+                              <MenuItem fx:id="HTP" mnemonicParsing="false" onAction="#HTPPressed" text="How To Play" />
+                           </items>
+                        </Menu>
+                     </menus>
+                  </MenuBar>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="114.0" prefWidth="700.0" text="Trivia Mayhem" textAlignment="CENTER">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </top>
 </BorderPane>
