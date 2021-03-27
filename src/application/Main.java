@@ -53,4 +53,22 @@ public class Main extends Application {
 			System.out.println(array[i]);
 		}
 	}
+	public static int NumOfQuestions;
+	public static String CategorySelected = "";
+
+	public static void setNum(int num) {
+		NumOfQuestions = num;
+	}
+	
+	public static int getNum() {
+		return NumOfQuestions;
+	}
+	
+	public static void setCat(String cat) {
+		CategorySelected = cat;
+	}
+	
+	public static String getCat() {
+		return CategorySelected;
+	}
 }

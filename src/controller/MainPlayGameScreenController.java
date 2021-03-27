@@ -49,6 +49,11 @@ public class MainPlayGameScreenController {
     public Label SolutionTitle;
     
     HashMap<Categories, ArrayList<Questions>> questionMap = new HashMap<Categories, ArrayList<Questions>>();
+    String choice1 = "";
+    String choice2 = "";
+    String choice3 = "";
+    String choice4 = "";
+    String solution = "";
     
     public void initialize() throws IOException {
     	QuestionList ql = new QuestionList("Trivia Mayhem", questionMap);
@@ -61,22 +66,55 @@ public class MainPlayGameScreenController {
     	ArrayList<Questions> QAL = questionMap.get(category);
     	Collections.shuffle(QAL);
     	String title = QAL.get(1).getQuestion();
-    	String choice1 = QAL.get(1).getChoice1();
-    	String choice2 = QAL.get(1).getChoice2();
-    	String choice3 = QAL.get(1).getChoice3();
-    	String choice4 = QAL.get(1).getChoice4();
+    	choice1 = QAL.get(1).getChoice1();
+    	choice2 = QAL.get(1).getChoice2();
+    	choice3 = QAL.get(1).getChoice3();
+    	choice4 = QAL.get(1).getChoice4();
+    	solution = QAL.get(1).getAnswer();
     	QuestionTitle.setText(title);
     	Answer1.setText(choice1);
     	Answer2.setText(choice2);
     	Answer3.setText(choice3);
     	Answer4.setText(choice4);
+    	SolutionTitle.setText("");
     	
     	
     }
     
     @FXML
-    public void checkSolution(ActionEvent event) {
-    	System.out.println("Answer Pushed");
+    public void checkSolution1(ActionEvent event) {
+    	 if(choice1.equals(solution)) {
+    		 SolutionTitle.setText("Correct!");
+    	 } else {
+    		 SolutionTitle.setText("Incorrect! The correct answer is : "+ solution);
+    	 }
+    }
+    
+    @FXML
+    public void checkSolution2(ActionEvent event) {
+    	if(choice2.equals(solution)) {
+   		 SolutionTitle.setText("Correct!");
+   	 } else {
+   		 SolutionTitle.setText("Incorrect! The correct answer is : "+ solution);
+   	 }
+    }
+    
+    @FXML
+    public void checkSolution3(ActionEvent event) {
+    	if(choice3.equals(solution)) {
+   		 SolutionTitle.setText("Correct!");
+   	 } else {
+   		 SolutionTitle.setText("Incorrect! The correct answer is : "+ solution);
+   	 }
+    }
+    
+    @FXML
+    public void checkSolution4(ActionEvent event) {
+    	if(choice4.equals(solution)) {
+   		 SolutionTitle.setText("Correct!");
+   	 } else {
+   		 SolutionTitle.setText("Incorrect! The correct answer is : "+ solution);
+   	 }
     }
 
     @FXML

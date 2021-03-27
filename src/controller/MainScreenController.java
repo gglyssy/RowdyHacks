@@ -29,7 +29,7 @@ public class MainScreenController {
     
     @FXML
     public void StartAGamePressed(ActionEvent event) throws IOException {
-    	FXMLLoader Start = new FXMLLoader(getClass().getResource("/view/MainPlayGameScreen.fxml"));
+    	FXMLLoader Start = new FXMLLoader(getClass().getResource("/view/MainGameOptions.fxml"));
 		Parent root = Start.load();
 		Stage stage = Main.getStage();
 		stage.setScene(new Scene(root));
