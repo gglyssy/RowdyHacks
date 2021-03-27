@@ -56,7 +56,12 @@ public class MainPlayGameScreenController {
     	ArrayList<Questions> questionAL = ql.getDataList();
     	ArrayList<Categories> categoryAL = ql.getCategoryList();
     	HashMap<Categories, ArrayList<Questions>> questionMap = ql.createMap(categoryAL, questionAL);
-
+    	Categories category = categoryAL.get(1);
+    	ArrayList<Questions> QAL = questionMap.get(category);
+    	String title = QAL.get(1).getQuestion();
+    	QuestionTitle.setText(title);
+    	
+    	
     	
     }
     

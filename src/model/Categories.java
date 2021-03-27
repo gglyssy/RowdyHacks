@@ -14,6 +14,7 @@ public class Categories {
 	public void setCategoryName(String c) {
 		this.categoryName = c;
 	}
+
 	
 	
 }
