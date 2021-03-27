@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" type="BorderPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainScreenController.java">
    <top>
       <Label text="RowdyHacks 2021 Winners" BorderPane.alignment="CENTER">
          <font>
@@ -20,4 +20,7 @@
          </font>
       </Label>
    </center>
-</BorderPane>
+   <right>
+      <Button fx:id="Sample" mnemonicParsing="false" text="Press this" BorderPane.alignment="CENTER" />
+   </right>
+</fx:root>
