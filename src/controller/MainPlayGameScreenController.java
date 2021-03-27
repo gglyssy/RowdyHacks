@@ -14,6 +14,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
 import javafx.stage.Stage;
 import model.Categories;
@@ -39,6 +40,12 @@ public class MainPlayGameScreenController {
 
     @FXML
     public MenuItem HTP;
+    
+    @FXML
+    public Label QuestionTitle;
+
+    @FXML
+    public Label SolutionTitle;
     
     HashMap<Categories, ArrayList<Questions>> questionMap = new HashMap<Categories, ArrayList<Questions>>();
     
