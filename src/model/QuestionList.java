@@ -1,13 +1,11 @@
 package model;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Scanner;
 
 
 public class QuestionList {
@@ -102,7 +100,7 @@ public class QuestionList {
 		Categories history = new Categories("History");
 		Categories movies = new Categories("Movies");
 		Categories sports = new Categories("Sports");
-		Categories shows = new Categories("tvShows");
+		Categories shows = new Categories("Shows");
 		
 		addCategory(history);
 		addCategory(movies);

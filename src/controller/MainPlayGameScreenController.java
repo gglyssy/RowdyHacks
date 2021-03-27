@@ -64,7 +64,21 @@ public class MainPlayGameScreenController {
     	ArrayList<Questions> questionAL = ql.getDataList();
     	ArrayList<Categories> categoryAL = ql.getCategoryList();
     	HashMap<Categories, ArrayList<Questions>> questionMap = ql.createMap(categoryAL, questionAL);
-    	Categories category = categoryAL.get(1);
+    	String cat = Main.getCat();
+    	int catNum = 1;
+    	if(cat.equals("History")) {
+    		catNum = 0;
+    	}
+    	if(cat.equals("Movies")){
+    		catNum = 1;
+    	}
+    	if(cat.equals("Sports")) {
+    		catNum = 2;
+    	}
+    	if(cat.equals("Shows")) {
+    		catNum = 3;
+    	}
+    	Categories category = categoryAL.get(catNum);
     	QAL = questionMap.get(category);
     	Collections.shuffle(QAL);
     	String title = QAL.get(0).getQuestion();
@@ -98,13 +112,23 @@ public class MainPlayGameScreenController {
     	SolutionTitle.setText("");
     }
     
+    public void categoryComplete() {
+    	SolutionTitle.setText("Congrats! You have comepleted this category");
+    }
+    
     @FXML
     public void checkSolution1(ActionEvent event) {
     	 if(choice1.equals(solution)) {
     		 SolutionTitle.setText("Correct!");
     		 questionNum++;
-    		 NextQuestion();
-    	 } else {
+    		 if(questionNum > 4) {
+    			 categoryComplete();
+    		 }
+    		 else
+    			 NextQuestion();
+    	 } 
+    	 
+    	 else {
     		 SolutionTitle.setText("Incorrect! The correct answer is : "+ solution);
     	 }
     }
@@ -112,35 +136,53 @@ public class MainPlayGameScreenController {
     @FXML
     public void checkSolution2(ActionEvent event) {
     	if(choice2.equals(solution)) {
-   		 SolutionTitle.setText("Correct!");
-   		 questionNum++;
-   		 NextQuestion();
-   	 } else {
+   		 	SolutionTitle.setText("Correct!");
+   		 	questionNum++;
+   		 	if(questionNum > 4) {
+   		 		categoryComplete();
+   		 	}
+   		else
+   			NextQuestion();
+   	 	} 
+    	
+    	else {
    		 SolutionTitle.setText("Incorrect! The correct answer is : "+ solution);
    	 }
-    }
+   }
     
     @FXML
     public void checkSolution3(ActionEvent event) {
     	if(choice3.equals(solution)) {
    		 SolutionTitle.setText("Correct!");
    		 questionNum++;
-   		 NextQuestion();
-   	 } else {
+   		 if(questionNum > 4) {
+   			 categoryComplete();
+   		 }
+   		 else
+   			 NextQuestion();
+   	 } 
+    	
+    	else {
    		 SolutionTitle.setText("Incorrect! The correct answer is : "+ solution);
    	 }
-    }
+   }
     
     @FXML
     public void checkSolution4(ActionEvent event) {
     	if(choice4.equals(solution)) {
    		 SolutionTitle.setText("Correct!");
    		 questionNum++;
-   		 NextQuestion();
-   	 } else {
+   		 if(questionNum > 4) {
+   			 categoryComplete();
+   		 }
+   		 else
+   			 NextQuestion();
+   	 } 
+    	
+    	else {
    		 SolutionTitle.setText("Incorrect! The correct answer is : "+ solution);
    	 }
-    }
+   }
 
     @FXML
     public void GoHomePressed(ActionEvent event) throws IOException {
