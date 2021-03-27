@@ -8,12 +8,6 @@
 <?import javafx.scene.layout.BorderPane?>
 
 <BorderPane prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #1c2c54;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainScreenController">
-   <top>
-      <Label text="Trivia Mayhem" textFill="#010402" BorderPane.alignment="CENTER">
-         <font>
-            <Font size="48.0" />
-         </font></Label>
-   </top>
    <bottom>
       <GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="271.0" prefWidth="700.0" BorderPane.alignment="CENTER">
         <columnConstraints>
@@ -32,32 +26,41 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="StartAGame" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#StartAGamePressed" style="-fx-background-radius: 100; -fx-background-color: #4bc3B5;" text="Start a game!" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+            <Button fx:id="StartAGame" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#StartAGamePressed" style="-fx-background-radius: 100; -fx-background-color: white;" text="Start a game!" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
                <font>
-                  <Font size="18.0" />
+                  <Font name="Arial Black" size="15.0" />
                </font>
             </Button>
-            <Button fx:id="HowToPlay" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#HowToPlayPressed" style="-fx-background-radius: 100; -fx-background-color: #4bc3B5;" text="How to Play" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+            <Button fx:id="HowToPlay" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#HowToPlayPressed" style="-fx-background-radius: 100; -fx-background-color: white;" text="How to Play" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                <font>
-                  <Font size="18.0" />
+                  <Font name="Arial Black" size="17.0" />
                </font>
             </Button>
-            <Button fx:id="About" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#AboutPressed" style="-fx-background-radius: 100; -fx-background-color: #4bc3B5;" text="About" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+            <Button fx:id="About" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#AboutPressed" style="-fx-background-radius: 100; -fx-background-color: white;" text="About" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                <font>
-                  <Font size="18.0" />
+                  <Font name="Arial Black" size="21.0" />
                </font>
             </Button>
          </children>
       </GridPane>
    </bottom>
-   <center>
-      <Label text="A game to test your knowledge" textFill="#010402" BorderPane.alignment="CENTER">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-   </center>
+   <top>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #4bc3B5; -fx-background-radius: 100;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="155.0" layoutY="26.0" text="Trivia Mayhem" textFill="#010402">
+               <font>
+                  <Font name="Arial Black" size="48.0" />
+               </font>
+            </Label>
+            <Label layoutX="248.0" layoutY="124.0" text="A game to test your knowledge" textFill="#010402">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </top>
 </BorderPane>
