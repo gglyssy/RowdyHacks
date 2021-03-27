@@ -33,7 +33,7 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Slider fx:id="VolumeSlider" onDragDetected="#VolumeDragged" prefHeight="23.0" prefWidth="167.0" value="50.0" GridPane.columnIndex="1" />
+                        <Slider fx:id="VolumeSlider" prefHeight="23.0" prefWidth="167.0" value="50.0" GridPane.columnIndex="1" />
                         <Button fx:id="Save" mnemonicParsing="false" onAction="#SaveChanges" text="Save Changes" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                         <Button fx:id="Cancel" mnemonicParsing="false" onAction="#CancelChanges" text="Cancel" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                         <Label text="Volume" />
