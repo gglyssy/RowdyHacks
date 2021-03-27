@@ -45,9 +45,9 @@
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="133.0" prefWidth="898.0">
                <children>
-                  <Label fx:id="QuestionTitle" layoutX="291.0" layoutY="15.0" text="Question HERE">
+                  <Label fx:id="QuestionTitle" alignment="CENTER" contentDisplay="CENTER" layoutY="-1.0" prefHeight="101.0" prefWidth="900.0" text="Question HERE" textAlignment="CENTER">
                      <font>
-                        <Font size="48.0" />
+                        <Font size="18.0" />
                      </font>
                   </Label>
                </children>
