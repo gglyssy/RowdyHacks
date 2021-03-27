@@ -25,7 +25,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="StartAGame" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#StartAGamePressed" style="-fx-background-radius: 100; -fx-background-color: white;" text="Start a game!" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+            <Button fx:id="StartAGame" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#StartAGamePressed" style="-fx-background-radius: 100; -fx-background-color: white;" text="Start a game!" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -33,38 +33,64 @@
                   <Font name="Arial Black" size="23.0" />
                </font>
             </Button>
-            <Button fx:id="HowToPlay" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#HowToPlayPressed" style="-fx-background-radius: 100; -fx-background-color: white;" text="How to Play" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
-               <font>
-                  <Font name="Arial Black" size="21.0" />
-               </font>
-            </Button>
-            <Button fx:id="About" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#AboutPressed" style="-fx-background-radius: 100; -fx-background-color: white;" text="About" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
-               <font>
-                  <Font name="Arial Black" size="20.0" />
-               </font>
-            </Button>
          </children>
       </GridPane>
    </bottom>
    <top>
-      <Pane prefHeight="200.0" prefWidth="600.0" style="-fx-background-color: #4bc3B5; -fx-background-radius: 55;" BorderPane.alignment="CENTER">
-         <children>
-            <Label layoutX="215.0" layoutY="23.0" text="Trivia Mayhem" textFill="#010402">
-               <font>
-                  <Font name="Arial Black" size="56.0" />
-               </font>
-            </Label>
-            <Label layoutX="295.0" layoutY="139.0" text="A game to test your knowledge" textFill="#010402">
-               <font>
-                  <Font size="26.0" />
-               </font>
-            </Label>
-            <ImageView fitHeight="194.0" fitWidth="292.0" layoutX="10.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../data/Trivia_Mayhem_Logo.png" />
-               </image>
-            </ImageView>
-         </children>
-      </Pane>
+      <SplitPane dividerPositions="0.1091703056768559" orientation="VERTICAL" prefHeight="231.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="21.0" prefWidth="698.0">
+               <children>
+                  <MenuBar>
+                    <menus>
+                      <Menu mnemonicParsing="false" text="Home">
+                        <items>
+                          <MenuItem fx:id="Home" mnemonicParsing="false" onAction="#goHome" text="Go Home" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Settings">
+                        <items>
+                          <MenuItem fx:id="Settings" mnemonicParsing="false" onAction="#SettingsOpened" text="Go Settings" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Help">
+                        <items>
+                          <MenuItem fx:id="HTP" mnemonicParsing="false" onAction="#HTPPushed" text="How to Play" />
+                        </items>
+                      </Menu>
+                        <Menu mnemonicParsing="false" text="About">
+                           <items>
+                              <MenuItem fx:id="About" mnemonicParsing="false" onAction="#openAbout" text="About" />
+                           </items>
+                        </Menu>
+                    </menus>
+                  </MenuBar>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Pane layoutX="14.0" prefHeight="200.0" prefWidth="688.0" style="-fx-background-color: #4bc3B5; -fx-background-radius: 55;">
+                     <children>
+                        <Label layoutX="215.0" layoutY="23.0" text="Trivia Mayhem" textFill="#010402">
+                           <font>
+                              <Font name="Arial Black" size="56.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="295.0" layoutY="139.0" text="A game to test your knowledge" textFill="#010402">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="194.0" fitWidth="292.0" layoutX="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../data/Trivia_Mayhem_Logo.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
    </top>
 </BorderPane>
