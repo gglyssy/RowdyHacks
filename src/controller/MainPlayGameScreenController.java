@@ -3,6 +3,7 @@ package controller;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.ResourceBundle;
 
@@ -58,6 +59,7 @@ public class MainPlayGameScreenController {
     	HashMap<Categories, ArrayList<Questions>> questionMap = ql.createMap(categoryAL, questionAL);
     	Categories category = categoryAL.get(1);
     	ArrayList<Questions> QAL = questionMap.get(category);
+    	Collections.shuffle(QAL);
     	String title = QAL.get(1).getQuestion();
     	String choice1 = QAL.get(1).getChoice1();
     	String choice2 = QAL.get(1).getChoice2();
