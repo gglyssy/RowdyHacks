@@ -1,4 +1,4 @@
-package application;
+package model;
 
 public class Questions {
 	String question;
@@ -64,4 +64,5 @@ public class Questions {
 	public void setAnswer(String a) {
 		this.answer = a;
 	}
+	
 }

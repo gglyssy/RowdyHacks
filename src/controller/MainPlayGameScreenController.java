@@ -1,6 +1,8 @@
 package controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 import application.Main;
 import javafx.event.ActionEvent;
@@ -11,6 +13,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuItem;
 import javafx.stage.Stage;
+import model.Categories;
+import model.Questions;
 
 public class MainPlayGameScreenController {
 
@@ -40,6 +44,7 @@ public class MainPlayGameScreenController {
 		stage.setScene(new Scene(root));
 		stage.show();
     }
+    
 
     @FXML
     public void HTPPressed(ActionEvent event) throws IOException {
