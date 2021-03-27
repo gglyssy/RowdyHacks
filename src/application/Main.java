@@ -7,21 +7,21 @@ import java.util.stream.IntStream;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
 
 public class Main extends Application {
+	
+	static Stage primaryStage;
+	
 	@Override
-	public void start(Stage primaryStage) {
-		try {
-			Parent root=FXMLLoader.load(getClass().getResource("/view/MainScreen.fxml"));
-			Scene scene = new Scene(root);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			primaryStage.setScene(scene);
-			primaryStage.show();
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
+	public void start(Stage primaryStage) throws Exception {
+		BorderPane root = (BorderPane) FXMLLoader.load(Main.class.getResource("/view/MainScreen.fxml")); 		//Import from SceneBuilder fxml file
+		Scene scene = new Scene(root); 															//Create new scene
+		//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm()); //Add style to scene
+		Main.primaryStage = primaryStage;
+		primaryStage.setScene(scene);															//Set scene													//Set Title
+		primaryStage.show();
 	}
 	
 	static int array[] = IntStream.range(0, 10).toArray();
@@ -41,8 +41,12 @@ public class Main extends Application {
 	    }
 	}
 	
+	public static Stage getStage() {
+		return primaryStage;
+	}
+	
 	public static void main(String[] args) {		
-		launch(args);
+		Application.launch(args);
 		shuffleArray(array);
 		for(int i = 0; i < array.length; i++) {
 			System.out.println(array[i]);
