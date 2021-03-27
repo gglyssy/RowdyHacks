@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainScreenController">
+<BorderPane prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #1c2c54;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainScreenController">
    <top>
-      <Label text="Trivia Mayhem" BorderPane.alignment="CENTER">
+      <Label text="Trivia Mayhem" textFill="#010402" BorderPane.alignment="CENTER">
          <font>
             <Font size="48.0" />
          </font></Label>
@@ -32,7 +32,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="StartAGame" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#StartAGamePressed" text="Start a game!" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+            <Button fx:id="StartAGame" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#StartAGamePressed" style="-fx-background-radius: 100; -fx-background-color: #4bc3B5;" text="Start a game!" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -40,12 +40,12 @@
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="HowToPlay" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#HowToPlayPressed" text="How to Play" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+            <Button fx:id="HowToPlay" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#HowToPlayPressed" style="-fx-background-radius: 100; -fx-background-color: #4bc3B5;" text="How to Play" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="About" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#AboutPressed" text="About" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+            <Button fx:id="About" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#AboutPressed" style="-fx-background-radius: 100; -fx-background-color: #4bc3B5;" text="About" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
                <font>
                   <Font size="18.0" />
                </font>
@@ -54,7 +54,7 @@
       </GridPane>
    </bottom>
    <center>
-      <Label text="A game to test your knowledge" BorderPane.alignment="CENTER">
+      <Label text="A game to test your knowledge" textFill="#010402" BorderPane.alignment="CENTER">
          <font>
             <Font size="18.0" />
          </font>
