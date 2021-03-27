@@ -100,7 +100,7 @@ public class QuestionList {
 		Categories history = new Categories("History");
 		Categories movies = new Categories("Movies");
 		Categories sports = new Categories("Sports");
-		Categories shows = new Categories("tvShows");
+		Categories shows = new Categories("Shows");
 		
 		addCategory(history);
 		addCategory(movies);
