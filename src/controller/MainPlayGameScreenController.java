@@ -139,7 +139,7 @@ public class MainPlayGameScreenController {
     	if(choice2.equals(solution)) {
    		 	SolutionTitle.setText("Correct!");
    		 	questionNum++;
-   		 	if(questionNum > 5) {
+   		 	if(questionNum > 4) {
    		 		categoryComplete();
    		 	}
    		else
@@ -156,7 +156,7 @@ public class MainPlayGameScreenController {
     	if(choice3.equals(solution)) {
    		 SolutionTitle.setText("Correct!");
    		 questionNum++;
-   		 if(questionNum > 5) {
+   		 if(questionNum > 4) {
    			 categoryComplete();
    		 }
    		 else
@@ -173,7 +173,7 @@ public class MainPlayGameScreenController {
     	if(choice4.equals(solution)) {
    		 SolutionTitle.setText("Correct!");
    		 questionNum++;
-   		 if(questionNum > 5) {
+   		 if(questionNum > 4) {
    			 categoryComplete();
    		 }
    		 else
