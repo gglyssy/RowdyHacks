@@ -64,7 +64,22 @@ public class MainPlayGameScreenController {
     	ArrayList<Questions> questionAL = ql.getDataList();
     	ArrayList<Categories> categoryAL = ql.getCategoryList();
     	HashMap<Categories, ArrayList<Questions>> questionMap = ql.createMap(categoryAL, questionAL);
-    	Categories category = categoryAL.get(1);
+    	String cat = Main.getCat();
+    	System.out.println(cat);
+    	int catNum = 1;
+    	if(cat.equals("History")) {
+    		catNum = 0;
+    	}
+    	if(cat.equals("Movies")){
+    		catNum = 1;
+    	}
+    	if(cat.equals("Sports")) {
+    		catNum = 2;
+    	}
+    	if(cat.equals("Shows")) {
+    		catNum = 3;
+    	}
+    	Categories category = categoryAL.get(catNum);
     	QAL = questionMap.get(category);
     	Collections.shuffle(QAL);
     	String title = QAL.get(0).getQuestion();
