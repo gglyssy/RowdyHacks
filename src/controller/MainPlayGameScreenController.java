@@ -54,6 +54,8 @@ public class MainPlayGameScreenController {
     String choice3 = "";
     String choice4 = "";
     String solution = "";
+    ArrayList<Questions> QAL = new ArrayList<Questions>();
+    int questionNum = 0;
     
     public void initialize() throws IOException {
     	QuestionList ql = new QuestionList("Trivia Mayhem", questionMap);
@@ -63,14 +65,14 @@ public class MainPlayGameScreenController {
     	ArrayList<Categories> categoryAL = ql.getCategoryList();
     	HashMap<Categories, ArrayList<Questions>> questionMap = ql.createMap(categoryAL, questionAL);
     	Categories category = categoryAL.get(1);
-    	ArrayList<Questions> QAL = questionMap.get(category);
+    	QAL = questionMap.get(category);
     	Collections.shuffle(QAL);
-    	String title = QAL.get(1).getQuestion();
-    	choice1 = QAL.get(1).getChoice1();
-    	choice2 = QAL.get(1).getChoice2();
-    	choice3 = QAL.get(1).getChoice3();
-    	choice4 = QAL.get(1).getChoice4();
-    	solution = QAL.get(1).getAnswer();
+    	String title = QAL.get(0).getQuestion();
+    	choice1 = QAL.get(0).getChoice1();
+    	choice2 = QAL.get(0).getChoice2();
+    	choice3 = QAL.get(0).getChoice3();
+    	choice4 = QAL.get(0).getChoice4();
+    	solution = QAL.get(0).getAnswer();
     	QuestionTitle.setText(title);
     	Answer1.setText(choice1);
     	Answer2.setText(choice2);
@@ -81,10 +83,27 @@ public class MainPlayGameScreenController {
     	
     }
     
+    public void NextQuestion() {
+    	String title = QAL.get(questionNum).getQuestion();
+    	choice1 = QAL.get(questionNum).getChoice1();
+    	choice2 = QAL.get(questionNum).getChoice2();
+    	choice3 = QAL.get(questionNum).getChoice3();
+    	choice4 = QAL.get(questionNum).getChoice4();
+    	solution = QAL.get(questionNum).getAnswer();
+    	QuestionTitle.setText(title);
+    	Answer1.setText(choice1);
+    	Answer2.setText(choice2);
+    	Answer3.setText(choice3);
+    	Answer4.setText(choice4);
+    	SolutionTitle.setText("");
+    }
+    
     @FXML
     public void checkSolution1(ActionEvent event) {
     	 if(choice1.equals(solution)) {
     		 SolutionTitle.setText("Correct!");
+    		 questionNum++;
+    		 NextQuestion();
     	 } else {
     		 SolutionTitle.setText("Incorrect! The correct answer is : "+ solution);
     	 }
@@ -94,6 +113,8 @@ public class MainPlayGameScreenController {
     public void checkSolution2(ActionEvent event) {
     	if(choice2.equals(solution)) {
    		 SolutionTitle.setText("Correct!");
+   		 questionNum++;
+   		 NextQuestion();
    	 } else {
    		 SolutionTitle.setText("Incorrect! The correct answer is : "+ solution);
    	 }
@@ -103,6 +124,8 @@ public class MainPlayGameScreenController {
     public void checkSolution3(ActionEvent event) {
     	if(choice3.equals(solution)) {
    		 SolutionTitle.setText("Correct!");
+   		 questionNum++;
+   		 NextQuestion();
    	 } else {
    		 SolutionTitle.setText("Incorrect! The correct answer is : "+ solution);
    	 }
@@ -112,6 +135,8 @@ public class MainPlayGameScreenController {
     public void checkSolution4(ActionEvent event) {
     	if(choice4.equals(solution)) {
    		 SolutionTitle.setText("Correct!");
+   		 questionNum++;
+   		 NextQuestion();
    	 } else {
    		 SolutionTitle.setText("Incorrect! The correct answer is : "+ solution);
    	 }
