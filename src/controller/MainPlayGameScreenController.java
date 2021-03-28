@@ -81,6 +81,9 @@ public class MainPlayGameScreenController {
 				second--;
 				
 				secondsTimer.setText(""+ second);
+				if(second == 0) {
+					timer.stop();
+				}
 				
 			}
 
@@ -88,7 +91,7 @@ public class MainPlayGameScreenController {
     }
     
     public void initialize() throws IOException {
-    	second = 60;
+    	second = 10;
     	simpleTimer();
     	timer.start();
     	QuestionList ql = new QuestionList("Trivia Mayhem", questionMap);
