@@ -98,6 +98,10 @@ public class MainPlayGameScreenController {
 					timer.stop();
 					secondsTimer.setText("Times Out");
 					results.setVisible(true);
+					Answer1.setVisible(false);
+			    	Answer2.setVisible(false);
+			    	Answer3.setVisible(false);
+			    	Answer4.setVisible(false);
 					return;
 				}
 				
