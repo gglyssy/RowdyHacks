@@ -20,18 +20,10 @@ public class SettingsController {
     @FXML
     public Slider VolumeSlider;
 	
-    @FXML
-    public void VolumeDragged(ActionEvent event) {
 
-    }
-    
     public static Double oldVolume = .5;
     public Double newVolume;
     
-    void intialize() {
-    	oldVolume = .5;
-    	newVolume = 0.0;
-    }
 
     @FXML
     public void SaveChanges(ActionEvent event) {
