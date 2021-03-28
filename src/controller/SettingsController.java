@@ -25,18 +25,22 @@ public class SettingsController {
     public Double newVolume;
     
 
+    public void initialize() {
+    	VolumeSlider.setValue(oldVolume*100);
+    }
+    
     @FXML
     public void SaveChanges(ActionEvent event) {
     	
-    	this.newVolume = VolumeSlider.getValue()/100;
-    	this.VolumeSlider.setValue(newVolume*100);
-    	this.oldVolume = newVolume;
+    	newVolume = VolumeSlider.getValue()/100;
+    	VolumeSlider.setValue(newVolume*100);
+    	oldVolume = newVolume;
     	Main.updateVol(newVolume);
     }
 
     @FXML
     public void CancelChanges(ActionEvent event) {
-    	this.VolumeSlider.setValue(oldVolume*100);
+    	VolumeSlider.setValue(oldVolume*100);
     }
 
 }
