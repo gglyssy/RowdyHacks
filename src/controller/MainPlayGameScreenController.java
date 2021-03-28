@@ -21,6 +21,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import model.Categories;
@@ -86,9 +87,13 @@ public class MainPlayGameScreenController {
 			public void actionPerformed(java.awt.event.ActionEvent e) {
 				second--;
 				
-				secondsTimer.setText(""+ second);
+				secondsTimer.setText(""+ second + " Sec.");
+				if(second <= 5) {
+					secondsTimer.setFill(Color.RED);
+				}
 				if(second == 0) {
 					timer.stop();
+					secondsTimer.setText("Times Out");
 				}
 				
 			}
@@ -134,7 +139,14 @@ public class MainPlayGameScreenController {
     public void NextQuestion() {
     	if(questionNum >= SelectedNum) {
     		categoryComplete();
-    	} else {
+    		timer.stop();
+    		return;
+    	}
+    	else if(second == 0) {
+    		outOfTime();
+    		return;
+    	}
+    	else {
     	title = QAL.get(questionNum).getQuestion();
     	QuestionNumber.setText(""+(questionNum+1));
     	choice1 = QAL.get(questionNum).getChoice1();
@@ -154,6 +166,10 @@ public class MainPlayGameScreenController {
     
     public void categoryComplete() {
     	SolutionTitle.setText("Congrats! You have comepleted this category and scored a " + ((double)totalRight)/SelectedNum*100 + "%. The incorrect questions are as followed:" + IncorrectAnswers);
+    }
+    
+    public void outOfTime() {
+    	SolutionTitle.setText("Out of Time");
     }
     
     @FXML
