@@ -12,9 +12,9 @@
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: #4bc3B5;">
                <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="36.0" layoutY="24.0" text="Settings for Trivia Mayhem" textAlignment="CENTER">
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="28.0" layoutY="29.0" text="Settings for Trivia Mayhem" textAlignment="CENTER">
                      <font>
-                        <Font size="36.0" />
+                        <Font name="Arial Black" size="30.0" />
                      </font>
                   </Label>
                </children>
@@ -33,9 +33,15 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Slider fx:id="VolumeSlider" prefHeight="23.0" prefWidth="167.0" value="50.0" GridPane.columnIndex="1" />
-                        <Button fx:id="Save" mnemonicParsing="false" onAction="#SaveChanges" text="Save Changes" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                        <Button fx:id="Cancel" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#CancelChanges" text="Cancel" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Slider fx:id="VolumeSlider" prefHeight="23.0" prefWidth="167.0" style="-fx-background-color: black;" value="50.0" GridPane.columnIndex="1" />
+                        <Button fx:id="Save" mnemonicParsing="false" onAction="#SaveChanges" prefHeight="25.0" prefWidth="170.0" style="-fx-background-radius: 100; -fx-background-color: white;" text="Save Changes" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Arial Black" size="15.0" />
+                           </font></Button>
+                        <Button fx:id="Cancel" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#CancelChanges" prefHeight="25.0" prefWidth="171.0" style="-fx-background-radius: 100; -fx-background-color: white;" text="Cancel" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Arial Black" size="15.0" />
+                           </font></Button>
                         <Label alignment="CENTER" prefHeight="102.0" prefWidth="192.0" text="Volume" textFill="WHITE">
                            <font>
                               <Font size="18.0" />
