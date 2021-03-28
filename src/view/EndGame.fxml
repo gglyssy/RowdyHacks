@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EndController">
+   <children>
+      <SplitPane dividerPositions="0.050100200400801605" orientation="VERTICAL" prefHeight="501.0" prefWidth="700.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <MenuBar layoutY="-1.0">
+                    <menus>
+                      <Menu mnemonicParsing="false" text="Home">
+                        <items>
+                          <MenuItem fx:id="HomeMenu" mnemonicParsing="false" onAction="#GoHome" text="Go Home" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Settings">
+                        <items>
+                          <MenuItem fx:id="Settings" mnemonicParsing="false" onAction="#openSettings" text="Open Settings" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Help">
+                        <items>
+                          <MenuItem fx:id="HTP" mnemonicParsing="false" onAction="#HTPPushed" text="How to Play" />
+                        </items>
+                      </Menu>
+                        <Menu mnemonicParsing="false" text="About">
+                           <items>
+                              <MenuItem fx:id="About" mnemonicParsing="false" onAction="#openAbout" text="About" />
+                           </items>
+                        </Menu>
+                    </menus>
+                  </MenuBar>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Label fx:id="Message" alignment="CENTER" layoutX="-2.0" prefHeight="265.0" prefWidth="700.0" text="EndStuff goes here" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="PA" layoutX="156.0" layoutY="318.0" mnemonicParsing="false" onAction="#PAPressed" text="Play Again!" />
+                  <Button fx:id="Home" layoutX="500.0" layoutY="318.0" mnemonicParsing="false" onAction="#goHome" text="Go Home" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

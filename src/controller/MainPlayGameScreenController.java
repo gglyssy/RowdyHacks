@@ -12,6 +12,7 @@ import java.util.ResourceBundle;
 import javax.swing.Timer;
 
 import application.Main;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -94,6 +95,7 @@ public class MainPlayGameScreenController {
 				if(second == 0) {
 					timer.stop();
 					secondsTimer.setText("Times Out");
+					return;
 				}
 				
 			}
@@ -101,7 +103,10 @@ public class MainPlayGameScreenController {
     	});
     }
     
+    public static List<String> IncorrectAnswers = new ArrayList<String>();
+    
     public void initialize() throws IOException {
+    	IncorrectAnswers.clear();
     	second = 10;
     	simpleTimer();
     	timer.start();
@@ -133,19 +138,18 @@ public class MainPlayGameScreenController {
     	
     }
     
-    public static List<String> IncorrectAnswers = new ArrayList<String>();
     String title;
     
-    public void NextQuestion() {
+    public void NextQuestion() throws IOException {
+    	if(second == 0) {
+    		outOfTime();
+    		return;
+    	}
     	if(questionNum >= SelectedNum) {
     		categoryComplete();
     		timer.stop();
     		return;
-    	}
-    	else if(second == 0) {
-    		outOfTime();
-    		return;
-    	}
+    	} 
     	else {
     	title = QAL.get(questionNum).getQuestion();
     	QuestionNumber.setText(""+(questionNum+1));
@@ -164,16 +168,34 @@ public class MainPlayGameScreenController {
     	}
     }
     
-    public void categoryComplete() {
-    	SolutionTitle.setText("Congrats! You have comepleted this category and scored a " + ((double)totalRight)/SelectedNum*100 + "%. The incorrect questions are as followed:" + IncorrectAnswers);
+    public static String message = "";
+    
+    public static String getMessage() {
+    	return message;
     }
     
-    public void outOfTime() {
-    	SolutionTitle.setText("Out of Time");
+    public void categoryComplete() throws IOException {
+    	message = "Congrats! You completed this category in time and scored a " + ((double)totalRight/SelectedNum*100) + "%. Here are the questions you got wrong: " + IncorrectAnswers;
+    	System.out.println(message);
+    	FXMLLoader main = new FXMLLoader(getClass().getResource("/view/EndGame.fxml"));
+		Parent root = main.load();
+		Stage stage = Main.getStage();
+		stage.setScene(new Scene(root));
+		stage.show();
+    }
+    
+    public Runnable outOfTime() throws IOException {
+    	message = "You ran out of time, try again faster in order to get a score. Here are the questions you got wrong:" +IncorrectAnswers;
+    	FXMLLoader main = new FXMLLoader(getClass().getResource("/view/EndGame.fxml"));
+		Parent root = main.load();
+		Stage stage = Main.getStage();
+		stage.setScene(new Scene(root));
+		stage.show();
+		return null;
     }
     
     @FXML
-    public void checkSolution1(ActionEvent event) {
+    public void checkSolution1(ActionEvent event) throws IOException {
     	 if(choice1.equals(solution)) {
     		 SolutionTitle.setText("Correct!");
     		 totalRight++;
@@ -186,7 +208,7 @@ public class MainPlayGameScreenController {
     }
     
     @FXML
-    public void checkSolution2(ActionEvent event) {
+    public void checkSolution2(ActionEvent event) throws IOException {
     	if(choice2.equals(solution)) {
    		 	SolutionTitle.setText("Correct!");
    		 	totalRight++;
@@ -199,7 +221,7 @@ public class MainPlayGameScreenController {
    }
     
     @FXML
-    public void checkSolution3(ActionEvent event) {
+    public void checkSolution3(ActionEvent event) throws IOException {
     	if(choice3.equals(solution)) {
    		 SolutionTitle.setText("Correct!");
    		 totalRight++;
@@ -212,7 +234,7 @@ public class MainPlayGameScreenController {
    }
     
     @FXML
-    public void checkSolution4(ActionEvent event) {
+    public void checkSolution4(ActionEvent event) throws IOException {
     	if(choice4.equals(solution)) {
    		 SolutionTitle.setText("Correct!");
    		 totalRight++;
