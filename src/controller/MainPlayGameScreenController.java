@@ -59,6 +59,9 @@ public class MainPlayGameScreenController {
     public Label SolutionTitle;
     
     @FXML
+    public Label QuestionNumber;
+    
+    @FXML
     public Text secondsTimer;
     
     Timer timer;
@@ -72,6 +75,8 @@ public class MainPlayGameScreenController {
     String solution = "";
     ArrayList<Questions> QAL = new ArrayList<Questions>();
     int questionNum = 0;
+    int SelectedNum = Main.getNum();
+    int totalRight = 0;
     
     public void simpleTimer() {
     	timer = new Timer(1000, new ActionListener() {
@@ -117,24 +122,17 @@ public class MainPlayGameScreenController {
     	Categories category = categoryAL.get(catNum);
     	QAL = questionMap.get(category);
     	Collections.shuffle(QAL);
-    	String title = QAL.get(0).getQuestion();
-    	choice1 = QAL.get(0).getChoice1();
-    	choice2 = QAL.get(0).getChoice2();
-    	choice3 = QAL.get(0).getChoice3();
-    	choice4 = QAL.get(0).getChoice4();
-    	solution = QAL.get(0).getAnswer();
-    	QuestionTitle.setText(title);
-    	Answer1.setText(choice1);
-    	Answer2.setText(choice2);
-    	Answer3.setText(choice3);
-    	Answer4.setText(choice4);
-    	SolutionTitle.setText("");
+    	NextQuestion();
     	
     	
     }
     
     public void NextQuestion() {
+    	if(questionNum >= SelectedNum) {
+    		categoryComplete();
+    	} else {
     	String title = QAL.get(questionNum).getQuestion();
+    	QuestionNumber.setText(""+(questionNum+1));
     	choice1 = QAL.get(questionNum).getChoice1();
     	choice2 = QAL.get(questionNum).getChoice2();
     	choice3 = QAL.get(questionNum).getChoice3();
@@ -146,26 +144,23 @@ public class MainPlayGameScreenController {
     	Answer3.setText(choice3);
     	Answer4.setText(choice4);
     	SolutionTitle.setText("");
+    	questionNum++;
+    	}
     }
     
     public void categoryComplete() {
-    	SolutionTitle.setText("Congrats! You have comepleted this category");
+    	SolutionTitle.setText("Congrats! You have comepleted this category and scored a " + ((double)totalRight)/SelectedNum*100 + "%");
     }
     
     @FXML
     public void checkSolution1(ActionEvent event) {
     	 if(choice1.equals(solution)) {
     		 SolutionTitle.setText("Correct!");
-    		 questionNum++;
-    		 if(questionNum > 4) {
-    			 categoryComplete();
-    		 }
-    		 else
-    			 NextQuestion();
-    	 } 
-    	 
-    	 else {
-    		 SolutionTitle.setText("Incorrect! The correct answer is : "+ solution);
+    		 totalRight++;
+    		 NextQuestion();
+    	 } else {
+    		 //SolutionTitle.setText("Incorrect! The correct answer is : "+ solution);
+    		 NextQuestion();
     	 }
     }
     
@@ -173,16 +168,11 @@ public class MainPlayGameScreenController {
     public void checkSolution2(ActionEvent event) {
     	if(choice2.equals(solution)) {
    		 	SolutionTitle.setText("Correct!");
-   		 	questionNum++;
-   		 	if(questionNum > 4) {
-   		 		categoryComplete();
-   		 	}
-   		else
-   			NextQuestion();
-   	 	} 
-    	
-    	else {
-   		 SolutionTitle.setText("Incorrect! The correct answer is : "+ solution);
+   		 	totalRight++;
+   		 	NextQuestion();
+   	 	} else {
+   		 //SolutionTitle.setText("Incorrect! The correct answer is : "+ solution);
+   		 NextQuestion();
    	 }
    }
     
@@ -190,16 +180,11 @@ public class MainPlayGameScreenController {
     public void checkSolution3(ActionEvent event) {
     	if(choice3.equals(solution)) {
    		 SolutionTitle.setText("Correct!");
-   		 questionNum++;
-   		 if(questionNum > 4) {
-   			 categoryComplete();
-   		 }
-   		 else
-   			 NextQuestion();
-   	 } 
-    	
-    	else {
-   		 SolutionTitle.setText("Incorrect! The correct answer is : "+ solution);
+   		 totalRight++;
+   		 NextQuestion();
+   	 } else {
+   		 //SolutionTitle.setText("Incorrect! The correct answer is : "+ solution);
+   		 NextQuestion();
    	 }
    }
     
@@ -207,16 +192,11 @@ public class MainPlayGameScreenController {
     public void checkSolution4(ActionEvent event) {
     	if(choice4.equals(solution)) {
    		 SolutionTitle.setText("Correct!");
-   		 questionNum++;
-   		 if(questionNum > 4) {
-   			 categoryComplete();
-   		 }
-   		 else
-   			 NextQuestion();
-   	 } 
-    	
-    	else {
-   		 SolutionTitle.setText("Incorrect! The correct answer is : "+ solution);
+   		 totalRight++;
+   		 NextQuestion();
+   	 } else {
+   		 //SolutionTitle.setText("Incorrect! The correct answer is : "+ solution);
+   		 NextQuestion();
    	 }
    }
 

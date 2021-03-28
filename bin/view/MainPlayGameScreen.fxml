@@ -83,6 +83,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
+                  <Label fx:id="QuestionNumber" layoutX="7.0" layoutY="6.0" text="Question Number goes here" textFill="WHITE" />
                </children>
             </AnchorPane>
           <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="447.0" prefWidth="898.0" style="-fx-background-color: #1c2c54;" SplitPane.resizableWithParent="false">
@@ -91,7 +92,7 @@
                   <Button fx:id="Answer2" layoutX="264.0" layoutY="150.0" mnemonicParsing="false" onAction="#checkSolution2" prefHeight="130.0" prefWidth="160.0" text="Answer2" />
                   <Button fx:id="Answer3" layoutX="475.0" layoutY="150.0" mnemonicParsing="false" onAction="#checkSolution3" prefHeight="130.0" prefWidth="160.0" text="Answer3" />
                   <Button fx:id="Answer4" layoutX="690.0" layoutY="150.0" mnemonicParsing="false" onAction="#checkSolution4" prefHeight="130.0" prefWidth="160.0" text="Answer4" />
-                  <Label fx:id="SolutionTitle" alignment="CENTER" layoutX="225.0" layoutY="295.0" prefHeight="102.0" prefWidth="448.0" text="Either correct or put right answer" textFill="RED" />
+                  <Label fx:id="SolutionTitle" alignment="CENTER" layoutX="225.0" layoutY="295.0" prefHeight="102.0" prefWidth="448.0" text="Either correct or put right answer and InCorrect Answers go here" textFill="RED" />
                </children>
             </AnchorPane>
         </items>

@@ -83,7 +83,6 @@ public class QuestionList {
 					String choice4 = dataComponents[4];
 					String answer = dataComponents[5];
 					String category = dataComponents[6];
-					System.out.println(category);
 				
 					Questions q = new Questions(question, choice1, choice2, choice3, choice4, answer, category);
 					addQuestion(q);
