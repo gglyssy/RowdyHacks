@@ -107,7 +107,11 @@ public class MainPlayGameScreenController {
     
     public void initialize() throws IOException {
     	IncorrectAnswers.clear();
-    	second = 10;
+    	if(SelectedNum == 5) {
+    		second = 10;
+    	} else if(SelectedNum == 10) {
+    		second = 20;
+    	}
     	simpleTimer();
     	timer.start();
     	QuestionList ql = new QuestionList("Trivia Mayhem", questionMap);
