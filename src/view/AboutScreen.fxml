@@ -5,11 +5,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane prefHeight="400.0" prefWidth="500.0" style="-fx-background-color: yellow;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane prefHeight="400.0" prefWidth="500.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <top>
-      <Label alignment="CENTER" prefHeight="40.0" prefWidth="569.0" text="Creators: Derek Cox, Devon Montes, Garrett Lyssy" wrapText="true" BorderPane.alignment="CENTER" />
+      <Label alignment="CENTER" prefHeight="66.0" prefWidth="500.0" style="-fx-background-color: #4bc3B5;" text="Creators: Derek Cox, Devon Montes, Garrett Lyssy" wrapText="true" BorderPane.alignment="CENTER" />
    </top>
    <center>
-      <Label alignment="CENTER" prefHeight="363.0" prefWidth="539.0" text="This desktop app was put together as apart of our RowdyHacks 2021 Project. It is a Trivia App meant to be used by those seeking a fun challenge/game in their free time. We added a New View after a game is complete for easier readibility of your final score and easy access to play again or return to the home screen. We also added background music to play in the background to help focus." textAlignment="CENTER" wrapText="true" BorderPane.alignment="CENTER" />
+      <Label alignment="CENTER" prefHeight="189.0" prefWidth="500.0" style="-fx-background-color: #1c2c54;" text="This desktop app was put together as apart of our RowdyHacks 2021 Project. It is a Trivia App meant to be used by those seeking a fun challenge/game in their free time. We added a New View after a game is complete for easier readibility of your final score and easy access to play again or return to the home screen. We also added background music to play in the background to help focus." textAlignment="CENTER" textFill="WHITE" wrapText="true" BorderPane.alignment="CENTER" />
    </center>
 </BorderPane>
