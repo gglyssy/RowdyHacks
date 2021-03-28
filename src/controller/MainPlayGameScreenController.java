@@ -184,7 +184,6 @@ public class MainPlayGameScreenController {
     
     public void categoryComplete() throws IOException {
     	message = "Congrats! You completed this category in time and scored a " + ((double)totalRight/SelectedNum*100) + "%. \nHere are the questions you got wrong:\n" + IncorrectAnswers;
-    	System.out.println(message);
     	FXMLLoader main = new FXMLLoader(getClass().getResource("/view/EndGame.fxml"));
 		Parent root = main.load();
 		Stage stage = Main.getStage();
