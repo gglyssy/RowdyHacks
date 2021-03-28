@@ -30,6 +30,8 @@ import model.Questions;
 import model.QuestionList;
 
 public class MainPlayGameScreenController {
+	@FXML
+	public Button results;
 
     @FXML
     public Button Answer4;
@@ -95,6 +97,7 @@ public class MainPlayGameScreenController {
 				if(second == 0) {
 					timer.stop();
 					secondsTimer.setText("Times Out");
+					results.setVisible(true);
 					return;
 				}
 				
@@ -106,6 +109,7 @@ public class MainPlayGameScreenController {
     public static List<String> IncorrectAnswers = new ArrayList<String>();
     
     public void initialize() throws IOException {
+    	results.setVisible(false);
     	IncorrectAnswers.clear();
     	if(SelectedNum == 5) {
     		second = 10;
@@ -145,10 +149,6 @@ public class MainPlayGameScreenController {
     String title;
     
     public void NextQuestion() throws IOException {
-    	if(second == 0) {
-    		outOfTime();
-    		return;
-    	}
     	if(questionNum >= SelectedNum) {
     		categoryComplete();
     		timer.stop();
@@ -188,14 +188,14 @@ public class MainPlayGameScreenController {
 		stage.show();
     }
     
-    public Runnable outOfTime() throws IOException {
+    @FXML
+    public void resultsPage(ActionEvent event) throws IOException {
     	message = "You ran out of time, try again faster in order to get a score. Here are the questions you got wrong:" +IncorrectAnswers;
     	FXMLLoader main = new FXMLLoader(getClass().getResource("/view/EndGame.fxml"));
 		Parent root = main.load();
 		Stage stage = Main.getStage();
 		stage.setScene(new Scene(root));
 		stage.show();
-		return null;
     }
     
     @FXML

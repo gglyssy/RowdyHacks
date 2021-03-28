@@ -93,6 +93,7 @@
                   <Button fx:id="Answer3" layoutX="475.0" layoutY="150.0" mnemonicParsing="false" onAction="#checkSolution3" prefHeight="130.0" prefWidth="160.0" text="Answer3" />
                   <Button fx:id="Answer4" layoutX="690.0" layoutY="150.0" mnemonicParsing="false" onAction="#checkSolution4" prefHeight="130.0" prefWidth="160.0" text="Answer4" />
                   <Label fx:id="SolutionTitle" alignment="CENTER" layoutY="295.0" prefHeight="153.0" prefWidth="900.0" text="Either correct or put right answer and Incorrect Answers go here" textFill="RED" wrapText="true" />
+                  <Button fx:id="results" layoutX="48.0" layoutY="330.0" mnemonicParsing="false" onAction="#resultsPage" text="Continue" />
                </children>
             </AnchorPane>
         </items>
