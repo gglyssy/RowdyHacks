@@ -61,6 +61,11 @@
                               <Font name="Arial Black" size="36.0" />
                            </font>
                         </Label>
+                        <Text fx:id="secondsTimer" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
                      </children>
                   </GridPane>
                </children>

@@ -1,11 +1,14 @@
 package controller;
 
+import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.ResourceBundle;
+
+import javax.swing.Timer;
 
 import application.Main;
 import javafx.event.ActionEvent;
@@ -17,6 +20,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import model.Categories;
 import model.Questions;
@@ -54,6 +58,12 @@ public class MainPlayGameScreenController {
     @FXML
     public Label SolutionTitle;
     
+    @FXML
+    public Text secondsTimer;
+    
+    Timer timer;
+    int second;
+    
     HashMap<Categories, ArrayList<Questions>> questionMap = new HashMap<Categories, ArrayList<Questions>>();
     String choice1 = "";
     String choice2 = "";
@@ -63,7 +73,24 @@ public class MainPlayGameScreenController {
     ArrayList<Questions> QAL = new ArrayList<Questions>();
     int questionNum = 0;
     
+    public void simpleTimer() {
+    	timer = new Timer(1000, new ActionListener() {
+
+			@Override
+			public void actionPerformed(java.awt.event.ActionEvent e) {
+				second--;
+				
+				secondsTimer.setText(""+ second);
+				
+			}
+
+    	});
+    }
+    
     public void initialize() throws IOException {
+    	second = 60;
+    	simpleTimer();
+    	timer.start();
     	QuestionList ql = new QuestionList("Trivia Mayhem", questionMap);
     	ql.loadData("data/Questions.csv");
     	ql.loadCategories();
