@@ -183,7 +183,7 @@ public class MainPlayGameScreenController {
     }
     
     public void categoryComplete() throws IOException {
-    	message = "Congrats! You completed this category in time and scored a " + ((double)totalRight/SelectedNum*100) + "%. Here are the questions you got wrong: " + IncorrectAnswers;
+    	message = "Congrats! You completed this category in time and scored a " + ((double)totalRight/SelectedNum*100) + "%. \nHere are the questions you got wrong:\n" + IncorrectAnswers;
     	System.out.println(message);
     	FXMLLoader main = new FXMLLoader(getClass().getResource("/view/EndGame.fxml"));
 		Parent root = main.load();
@@ -194,7 +194,7 @@ public class MainPlayGameScreenController {
     
     @FXML
     public void resultsPage(ActionEvent event) throws IOException {
-    	message = "You ran out of time, try again faster in order to get a score. Here are the questions you got wrong:" +IncorrectAnswers;
+    	message = "You ran out of time, try again faster in order to get a score. \nHere are the questions you got wrong:\n" +IncorrectAnswers;
     	FXMLLoader main = new FXMLLoader(getClass().getResource("/view/EndGame.fxml"));
 		Parent root = main.load();
 		Stage stage = Main.getStage();
