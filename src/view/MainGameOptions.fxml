@@ -37,7 +37,7 @@
                         </Menu>
                      </menus>
                   </MenuBar>
-                  <ImageView fitHeight="119.0" fitWidth="171.0" layoutX="272.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="119.0" fitWidth="171.0" layoutX="286.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../data/Trivia_Mayhem_Logo.png" />
                      </image>
@@ -74,7 +74,11 @@
                   </Label>
                </children>
             </GridPane>
-            <Button fx:id="Launch" alignment="CENTER" contentDisplay="CENTER" layoutX="264.0" layoutY="295.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#LaunchPressed" prefHeight="44.0" prefWidth="168.0" style="-fx-background-radius: 100; -fx-background-color: white;" text="Launch Game" textAlignment="CENTER" />
+            <Button fx:id="Launch" alignment="CENTER" contentDisplay="CENTER" layoutX="264.0" layoutY="295.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#LaunchPressed" prefHeight="44.0" prefWidth="168.0" style="-fx-background-radius: 100; -fx-background-color: white;" text="Launch Game" textAlignment="CENTER">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
    </center>

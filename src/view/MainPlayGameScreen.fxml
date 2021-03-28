@@ -88,10 +88,22 @@
             </AnchorPane>
           <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="447.0" prefWidth="898.0" style="-fx-background-color: #1c2c54;" SplitPane.resizableWithParent="false">
                <children>
-                  <Button fx:id="Answer1" layoutX="48.0" layoutY="150.0" mnemonicParsing="false" onAction="#checkSolution1" prefHeight="130.0" prefWidth="160.0" text="Answer1" />
-                  <Button fx:id="Answer2" layoutX="264.0" layoutY="150.0" mnemonicParsing="false" onAction="#checkSolution2" prefHeight="130.0" prefWidth="160.0" text="Answer2" />
-                  <Button fx:id="Answer3" layoutX="475.0" layoutY="150.0" mnemonicParsing="false" onAction="#checkSolution3" prefHeight="130.0" prefWidth="160.0" text="Answer3" />
-                  <Button fx:id="Answer4" layoutX="690.0" layoutY="150.0" mnemonicParsing="false" onAction="#checkSolution4" prefHeight="130.0" prefWidth="160.0" text="Answer4" />
+                  <Button fx:id="Answer1" layoutX="48.0" layoutY="150.0" mnemonicParsing="false" onAction="#checkSolution1" prefHeight="130.0" prefWidth="160.0" style="-fx-background-color: white;" text="Answer1" wrapText="true">
+                     <font>
+                        <Font name="Arial Black" size="14.0" />
+                     </font></Button>
+                  <Button fx:id="Answer2" layoutX="264.0" layoutY="150.0" mnemonicParsing="false" onAction="#checkSolution2" prefHeight="130.0" prefWidth="160.0" style="-fx-background-color: white;" text="Answer2" wrapText="true">
+                     <font>
+                        <Font name="Arial Black" size="14.0" />
+                     </font></Button>
+                  <Button fx:id="Answer3" layoutX="475.0" layoutY="150.0" mnemonicParsing="false" onAction="#checkSolution3" prefHeight="130.0" prefWidth="160.0" style="-fx-background-color: white;" text="Answer3" wrapText="true">
+                     <font>
+                        <Font name="Arial Black" size="14.0" />
+                     </font></Button>
+                  <Button fx:id="Answer4" layoutX="690.0" layoutY="150.0" mnemonicParsing="false" onAction="#checkSolution4" prefHeight="130.0" prefWidth="160.0" style="-fx-background-color: white;" text="Answer4" wrapText="true">
+                     <font>
+                        <Font name="Arial Black" size="14.0" />
+                     </font></Button>
                   <Label fx:id="SolutionTitle" alignment="CENTER" layoutY="295.0" prefHeight="153.0" prefWidth="900.0" text="Either correct or put right answer and Incorrect Answers go here" textFill="RED" wrapText="true" />
                   <Button fx:id="results" layoutX="365.0" layoutY="182.0" mnemonicParsing="false" onAction="#resultsPage" prefHeight="43.0" prefWidth="165.0" style="-fx-background-radius: 80; -fx-background-color: white;" text="Results">
                      <font>

@@ -45,8 +45,14 @@
                         <Font name="Arial Black" size="14.0" />
                      </font>
                   </Label>
-                  <Button fx:id="PA" layoutX="156.0" layoutY="318.0" mnemonicParsing="false" onAction="#PAPressed" text="Play Again!" />
-                  <Button fx:id="Home" layoutX="500.0" layoutY="318.0" mnemonicParsing="false" onAction="#goHome" text="Go Home" />
+                  <Button fx:id="PA" layoutX="156.0" layoutY="318.0" mnemonicParsing="false" onAction="#PAPressed" style="-fx-background-radius: 100; -fx-background-color: white;" text="Play Again!">
+                     <font>
+                        <Font name="Arial Black" size="15.0" />
+                     </font></Button>
+                  <Button fx:id="Home" layoutX="500.0" layoutY="318.0" mnemonicParsing="false" onAction="#goHome" style="-fx-background-color: white; -fx-background-radius: 100;" text="Go Home">
+                     <font>
+                        <Font name="Arial Black" size="15.0" />
+                     </font></Button>
                </children>
             </AnchorPane>
         </items>
