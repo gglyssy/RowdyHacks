@@ -63,17 +63,12 @@ public class QuestionList {
 	}
 	
 	public void loadData(String filename) throws IOException {
-		//File file = new File(filename);
-		
-		
 			try 
 			{
-				//Scanner inputStream = new Scanner(file);
 				String data = "";
 				BufferedReader br = new BufferedReader(new FileReader(filename));
 				while ((data = br.readLine()) != null) 
 				{
-					//String data = inputStream.nextLine();
 					String splitBy = ",";
 					String [] dataComponents = data.split(splitBy);
 					String question = dataComponents[0];
