@@ -6,6 +6,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.ResourceBundle;
 
 import javax.swing.Timer;
@@ -127,11 +128,14 @@ public class MainPlayGameScreenController {
     	
     }
     
+    public static List<String> IncorrectAnswers = new ArrayList<String>();
+    String title;
+    
     public void NextQuestion() {
     	if(questionNum >= SelectedNum) {
     		categoryComplete();
     	} else {
-    	String title = QAL.get(questionNum).getQuestion();
+    	title = QAL.get(questionNum).getQuestion();
     	QuestionNumber.setText(""+(questionNum+1));
     	choice1 = QAL.get(questionNum).getChoice1();
     	choice2 = QAL.get(questionNum).getChoice2();
@@ -149,7 +153,7 @@ public class MainPlayGameScreenController {
     }
     
     public void categoryComplete() {
-    	SolutionTitle.setText("Congrats! You have comepleted this category and scored a " + ((double)totalRight)/SelectedNum*100 + "%");
+    	SolutionTitle.setText("Congrats! You have comepleted this category and scored a " + ((double)totalRight)/SelectedNum*100 + "%. The incorrect questions are as followed:" + IncorrectAnswers);
     }
     
     @FXML
@@ -160,6 +164,7 @@ public class MainPlayGameScreenController {
     		 NextQuestion();
     	 } else {
     		 //SolutionTitle.setText("Incorrect! The correct answer is : "+ solution);
+    		 IncorrectAnswers.add(title);
     		 NextQuestion();
     	 }
     }
@@ -172,6 +177,7 @@ public class MainPlayGameScreenController {
    		 	NextQuestion();
    	 	} else {
    		 //SolutionTitle.setText("Incorrect! The correct answer is : "+ solution);
+   	 	 IncorrectAnswers.add(title);
    		 NextQuestion();
    	 }
    }
@@ -184,6 +190,7 @@ public class MainPlayGameScreenController {
    		 NextQuestion();
    	 } else {
    		 //SolutionTitle.setText("Incorrect! The correct answer is : "+ solution);
+   		 IncorrectAnswers.add(title);
    		 NextQuestion();
    	 }
    }
@@ -196,6 +203,7 @@ public class MainPlayGameScreenController {
    		 NextQuestion();
    	 } else {
    		 //SolutionTitle.setText("Incorrect! The correct answer is : "+ solution);
+   		 IncorrectAnswers.add(title);
    		 NextQuestion();
    	 }
    }
